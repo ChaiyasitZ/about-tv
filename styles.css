@@ -1,50 +1,208 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
-header {
+/* การตั้งค่าพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* การจัดรูปแบบส่วนของแต่ละ Section */
+section {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff6347;
+    padding-bottom: 5px;
+}
+
+ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+/* การตั้งค่ารูปภาพ */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* การจัดรูปแบบ Footer */
+footer {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
     text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* การทำ Responsive สำหรับหน้าจอเล็ก */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* การจัดรูปแบบ Navbar */
+nav {
+    background-color: #ff6347;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 10px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-main {
-    padding: 20px;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+/* เมนูนำทางที่ติดตามผู้ใช้ */
+nav.fixed {
     position: fixed;
-    width: 100%;
-    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* การทำ Responsive สำหรับ Navbar */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+/* การทำ Responsive สำหรับ iPad และโทรศัพท์มือถือ */
+@media (max-width: 1024px) { /* iPad (Portrait) and below */
+    body {
+        padding: 10px;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 768px) { /* โทรศัพท์มือถือ */
+    body {
+        padding: 5px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* การตั้งค่าพื้นฐานของ container สำหรับรูปภาพ */
+.image-container {
+    display: flex; /* ใช้ Flexbox */
+    justify-content: space-between; /* จัดตำแหน่งรูปภาพให้ห่างกัน */
+    gap: 10px; /* เว้นระยะห่างระหว่างรูปภาพ */
+    flex-wrap: wrap; /* จัดการห่อหุ้มเมื่อขนาดหน้าจอเล็ก */
+}
+
+/* การตั้งค่าของกล่องรูปภาพ */
+.image-box {
+    flex: 1; /* ให้กล่องรูปภาพขยายเต็มพื้นที่ */
+    max-width: calc(50% - 10px); /* ขนาดของกล่องรูปภาพ */
+}
+
+/* การตั้งค่าสำหรับรูปภาพ */
+.image {
+    max-width: 100%; /* ทำให้รูปภาพไม่เกินขนาดของบรรพบุรุษ */
+    height: auto; /* คงสัดส่วนของรูปภาพ */
+    border-radius: 10px; /* มุมมน */
+    margin-bottom: 20px; /* เว้นระยะด้านล่าง */
+    display: block; /* ทำให้รูปภาพเป็นบล็อก */
+}
+
+/* การตั้งค่าสำหรับรูปภาพที่เป็น thumbnail */
+.image.thumbnail {
+    max-width: 150px; /* ขนาดสูงสุดของรูปภาพ thumbnail */
+    border: 2px solid #ddd; /* ขอบของรูปภาพ */
+    padding: 5px; /* ระยะห่างภายใน */
+    border-radius: 5px; /* มุมมน */
+}
+
+/* การจัดรูปแบบรูปภาพเมื่อ hover */
+.image:hover {
+    opacity: 0.8; /* ลดความทึบลงเมื่อ hover */
+    transition: opacity 0.3s ease; /* การเปลี่ยนแปลงที่นุ่มนวล */
 }
