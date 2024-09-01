@@ -20,6 +20,7 @@ h1, h2 {
 }
 
 p {
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
@@ -43,6 +44,12 @@ ul {
     margin-left: 20px;
     list-style-type: disc;
 }
+
+ul li{
+    font-size: 1.2rem;
+}
+
+
 
 /* การตั้งค่ารูปภาพ */
 img {
@@ -95,6 +102,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.4rem;
 }
 
 nav ul li a:hover {
@@ -186,8 +194,9 @@ nav.fixed {
 
 /* การตั้งค่าสำหรับรูปภาพ */
 .image {
-    max-width: 100%; /* ทำให้รูปภาพไม่เกินขนาดของบรรพบุรุษ */
-    height: auto; /* คงสัดส่วนของรูปภาพ */
+    max-width: 50%; /* ทำให้รูปภาพไม่เกินขนาดของบรรพบุรุษ */
+    height: 100%; /* คงสัดส่วนของรูปภาพ */
+    border: black 2px solid; /* ขอบของรูปภาพ */
     border-radius: 10px; /* มุมมน */
     margin-bottom: 20px; /* เว้นระยะด้านล่าง */
     margin-left: auto; /* ชิดขอบด้านซ้าย */
@@ -197,7 +206,7 @@ nav.fixed {
 
 /* การตั้งค่าสำหรับรูปภาพที่เป็น thumbnail */
 .image.thumbnail {
-    max-width: 150px; /* ขนาดสูงสุดของรูปภาพ thumbnail */
+    max-width: 10px; /* ขนาดสูงสุดของรูปภาพ thumbnail */
     border: 2px solid #ddd; /* ขอบของรูปภาพ */
     padding: 5px; /* ระยะห่างภายใน */
     border-radius: 5px; /* มุมมน */
@@ -208,3 +217,27 @@ nav.fixed {
     opacity: 0.8; /* ลดความทึบลงเมื่อ hover */
     transition: opacity 0.3s ease; /* การเปลี่ยนแปลงที่นุ่มนวล */
 }
+
+/* การจัดรูปแบบ Header */
+header {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/* การจัดรูปแบบข้อมูลผู้เขียน */
+.author-info {
+    background-color: #fff;
+    border-top: 2px solid #ff6347;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* การตั้งค่ารูปแบบของข้อมูลผู้เขียน */
+.author-info p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
