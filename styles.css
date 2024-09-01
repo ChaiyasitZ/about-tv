@@ -51,13 +51,7 @@ ul li{
 
 
 
-/* การตั้งค่ารูปภาพ */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
+
 
 /* การจัดรูปแบบ Footer */
 footer {
