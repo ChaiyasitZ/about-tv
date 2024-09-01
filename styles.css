@@ -190,6 +190,8 @@ nav.fixed {
     height: auto; /* คงสัดส่วนของรูปภาพ */
     border-radius: 10px; /* มุมมน */
     margin-bottom: 20px; /* เว้นระยะด้านล่าง */
+    margin-left: auto; /* ชิดขอบด้านซ้าย */
+    margin-right: auto; /* ชิดขอบด้านขวา */
     display: block; /* ทำให้รูปภาพเป็นบล็อก */
 }
 
